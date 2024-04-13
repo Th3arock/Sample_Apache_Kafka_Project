@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: "Your Apache-Kafka ip"
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: com.behsa.producer.serializer.SmsSerializer
+      acks: all
+      properties:
+        enable:
+            idempotence: true
+      retries: 3
+      retry:
+        backoff:
+          ms: 100
+
+
+

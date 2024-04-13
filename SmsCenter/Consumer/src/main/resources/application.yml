@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  kafka:
+    listener:
+      ack-mode: manual_immediate
+    consumer:
+      bootstrap-servers: "Your Apache-Kafka ip"
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: com.behsa.consumer.deserializer.SmsDeserializer
+      enable-auto-commit: false
+      group-id: Behsa
+      auto-offset-reset: latest
