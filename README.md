@@ -4,11 +4,11 @@
 •  Please note that you must start ZooKeeper and Kafka before using this app. You can start Kafka and ZooKeeper using 
     the following command-line interface (CLI) commands:
 
-•  For Kafka:
+•  For Kafka i Linux:
 
 `./bin/kafka-server-start.sh ./config/server.properties`
 
-•  For ZooKeeper:
+•  For ZooKeeper in Linux:
 
 `./bin/zookeeper-server-start.sh ./config/zookeeper.properties`
 
